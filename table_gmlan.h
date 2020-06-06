@@ -1,28 +1,18 @@
 /*
 Confirmed on e38 seed/key.
-It has this algorithm, which is part of current table.
+It has this algorithm (0x92), which is part of current table.
 
 7e 7d 58 2a b8 70 75 01 80 05 2f 98
 #unsigned int E38(unsigned int seeds)
-
 {
-
 	int key = 0;
-
 	key = ((seeds & 0x0000FF00) >> 8) | ((seeds & 0x000000FF) << 8);
-
 	key = key + 0x7D58;
-
 	key = ~key;
-
 	key = key & 0xFFFF;
-
 	key = key + 0x8001;
-
 	key = ((key & 0x0000FF00) >> 8) | ((key & 0x000000FF) << 8);
-
 	return key;
-
 }
 */
 
