@@ -201,7 +201,7 @@ int main(int argc, char **argv)
 				return 0;
 		}
 
-#if WITH_TESTS
+#ifdef WITH_TESTS
 	int i;
 	for (i = 0; i < sizeof(tests) / sizeof(tests[0]); i++)
 		if (tests[i][2] != get_key(tests[i][1], tests[i][0], table))
